@@ -145,4 +145,3 @@ fn increment_major(sv: &mut SemVer) {
 fn print_number(n: u32) {
     println!("a number: {}", n);
 }
-
