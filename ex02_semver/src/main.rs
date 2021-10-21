@@ -12,8 +12,12 @@ struct SemVer {
 impl FromStr for SemVer {
     type Err = ParseIntError;
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        // remember filter_map
-        todo!()
+        let numbers: Vec<u16> = s.split(".").filter_map(|s| s.parse().ok()).collect();
+        Ok(SemVer {
+            major: numbers[0],
+            minor: numbers[1],
+            patch: numbers[2],
+        })
     }
 }
 
