@@ -5,16 +5,12 @@ use std::{
 
 use semver::{Crate, Library, Program};
 
-use crate::util::say_hi;
-
-mod util;
-
 fn main() -> Result<(), anyhow::Error> {
     let sv = semver::SemVer::from_str("1.2.3")?;
     println!("parse successful! {:?}", sv);
 
     dbg!(format!("{:?}", sv));
-    say_hi();
+
     // exit successfully
 
     let program = Program {
