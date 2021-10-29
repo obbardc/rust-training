@@ -33,8 +33,8 @@ fn main() -> Result<(), anyhow::Error> {
         release_history: vec![],
     };
 
-    // print_crate_names(&vec![program, program_2]);
-    // print_crate_names(&vec![library, library_2]);
+    //print_crate_names(&vec![program, program_2]);
+    //print_crate_names(&vec![library, library_2]);
 
     let crates: Vec<Box<dyn Crate>> = vec![Box::new(program.clone()), Box::new(library)];
     for item in crates {
